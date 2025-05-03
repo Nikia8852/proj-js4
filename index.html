@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza shop</title>
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <header class="header">
         <div class="header__container">
-            <h3 class="header__logo">pizzashop</h3>
+            <a href="#hero" class="header__logo logo">pizzashop</a>
             <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item">
@@ -30,7 +30,7 @@
             </nav>
             <div class="header__btns">
                 <button class="header__btn">Log in</button>
-                <button class="header__btn">
+                <button class="header__basket">
                     <svg class="header__icon basket">
                         <use xlink:href="./img/symbol-defs.svg#basket" />
                     </svg>
@@ -46,45 +46,56 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero__container">
-                <picture>
-                    <source type="image/avif" srcset="./img/hero/main-428-1x.avif 1x, ./img/hero/main-428-2x.avif 2x"
-                        media="(min-width: 428px) and (max-width: 1511px)">
-                    <source type="image/avif" srcset="./img/hero/main-1512-1x.avif 1x, ./img/hero/main-1512-2x.avif 2x"
-                        media="(min-width: 1511px)">
-                    <source type="image/webp" srcset="./img/hero/main-428-1x.webp 1x, ./img/hero/main-428-2x.webp 2x"
-                        media="(min-width: 428px) and (max-width: 1511px)">
-                    <source type="image/webp" srcset="./img/hero/main-1512-1x.webp 1x, ./img/hero/main-1512-2x.webp 2x"
-                        media="(min-width: 1511px)">
-                    <source type="image/jpeg" srcset="./img/hero/main-428-1x.jpeg 1x, ./img/hero/main-428-2x.jpeg 2x"
-                        media="(min-width: 428px) and (max-width: 1511px)">
-                    <source type="image/jpeg" srcset="./img/hero/main-1512-1x.jpeg 1x, ./img/hero/main-1512-2x.jpeg 2x"
-                        media="(min-width: 1511px)">
-                    <img class="hero__img" src="#" alt="pizza">
-                </picture>
+                <div class="decor__wrapper">
+                    <picture>
+                        <source type="image/avif"
+                            srcset="./img/hero/main-428-1x.avif 1x, ./img/hero/main-428-2x.avif 2x"
+                            media="(min-width: 428px) and (max-width: 1511px)">
+                        <source type="image/avif"
+                            srcset="./img/hero/main-1512-1x.avif 1x, ./img/hero/main-1512-2x.avif 2x"
+                            media="(min-width: 1511px)">
+                        <source type="image/webp"
+                            srcset="./img/hero/main-428-1x.webp 1x, ./img/hero/main-428-2x.webp 2x"
+                            media="(min-width: 428px) and (max-width: 1511px)">
+                        <source type="image/webp"
+                            srcset="./img/hero/main-1512-1x.webp 1x, ./img/hero/main-1512-2x.webp 2x"
+                            media="(min-width: 1511px)">
+                        <source type="image/jpeg"
+                            srcset="./img/hero/main-428-1x.jpeg 1x, ./img/hero/main-428-2x.jpeg 2x"
+                            media="(min-width: 428px) and (max-width: 1511px)">
+                        <source type="image/jpeg"
+                            srcset="./img/hero/main-1512-1x.jpeg 1x, ./img/hero/main-1512-2x.jpeg 2x"
+                            media="(min-width: 1511px)">
+                        <img class="hero__img" src="#" alt="pizza">
+                    </picture>
+                </div>
                 <div>
-                    <h1 class="hero__title">The Fastest Pizza
-                        <svg class="header__icon lighning">
+                    <h1 class="hero__title section-title">The Fastest Pizza <svg class="header__icon lighning">
                             <use xlink:href="./img/symbol-defs.svg#lighning" />
-                        </svg>
-                        Delivery
+                        </svg>Delivery
                     </h1>
                     <p class="hero__text">We will deliver juicy pizza for your family in 30 minutes, if the courier is
                         late - <span> pizza is free!</span>
                     </p>
                     <div class="hero__wrapper">
                         <div class="hero__btns">
-                            <button class="hero__btn">To order</button><button class="hero__btn">Pizza-Menu</button>
+                            <button class="hero__btn btn__active">To order</button><button 
+                                class="hero__btn ">Pizza-Menu</button>
                         </div>
-                        <p class="hero__text">Cooking process:</p>
-                        <div class="hero__video">
-                            <button class="header-video__btn"></button>
-                            <picture>
-                                <source type="image/jpeg" srcset="./img/hero/video-428-2x.jpg 2x"
-                                    media="(min-width: 428px) and (max-width: 1511px)">
-                                <source type="image/jpeg" srcset="./img/hero/video-1512-2x.jpg 2x"
-                                    media="(min-width: 1511px)">
-                                <img src="#" alt="video">
-                            </picture>
+                        <div class="hero-video__wrapper">
+                            <p class="hero__text">Cooking process:</p>
+                            <div>
+                                <button class="header-video__btn"> <svg class="hero__icon play">
+                                        <use xlink:href="./img/symbol-defs.svg#play"></use>
+                                    </svg></button>
+                                <picture>
+                                    <source type="image/jpeg" srcset="./img/hero/video-428-2x.jpg 2x"
+                                        media="(min-width: 428px) and (max-width: 1511px)">
+                                    <source type="image/jpeg" srcset="./img/hero/video-1512-2x.jpg 2x"
+                                        media="(min-width: 1511px)">
+                                    <img class="hero__video" src="#" alt="video">
+                                </picture>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,8 +103,9 @@
         </section>
         <section id="menu" class="menu">
             <div class="menu__container">
+                <h2 class="menu__title section-title">MENU</h2>
                 <ul class="menu__list">
-                    <li class="menu__item"><button class="menu-item__btn">Show All</button></li>
+                    <li class="menu__item"><button class="menu-item__btn btn__active">Show All</button></li>
                     <li class="menu__item"><button class="menu-item__btn">Meat</button></li>
                     <li class="menu__item"><button class="menu-item__btn">Vegetarian</button></li>
                     <li class="menu__item"><button class="menu-item__btn">Sea products</button></li>
@@ -239,7 +251,7 @@
                             media="(min-width: 1511px)">
                         <img class="menu-img" src="#" alt="pizza">
                     </picture>
-                    <p class="menu__title">MOST POPULAR PIZZA</p>
+                    <p class="menu-img__title">MOST POPULAR PIZZA</p>
                 </div>
                 <ul class="menu__cards">
                     <li class="menu__card">
@@ -276,7 +288,7 @@
                             <picture>
                                 <source srcset="./img/menu/gribnya-428.png"
                                     media="(min-width: 428px) and (max-width: 1511px)">
-                                <source srcset="./img/menu/gribnaya-1512.png" media="(min-width: 1511px)">
+                                <source srcset="./img/menu/gribnya-1512.png" media="(min-width: 1511px)">
                                 <img class="card__img" src="#" alt="pizza">
                             </picture>
                             <h3 class="card__title">Gribnaya</h3>
@@ -363,64 +375,86 @@
         </section>
         <section id="events" class="events">
             <div class="events__container">
+                <div class="events__content">
+                    <h2 class="events__title section-title">Events</h2>
+                    <p class="events__text">There are regular events in our pizzeria that will allow you to eat
+                        delicious food for a lower price!</p>
+                </div>
                 <div class="events__items">
                     <div class="events__item">
-                        <h2 class="events__title">Events</h2>
-                        <p class="events__text">There are regular events in our pizzeria that will allow you to eat
-                            delicious food for a lower price!</p>
+                        <div class="events-item__wrapper">
+                            <h3 class="events-item__title">HOW WE COOKING</h3>
+                            <button class="events-item__btn">More</button>
+                        </div>
                     </div>
                     <div class="events__item">
-                        <p class="events-item__text">HOW WE COOKING</p>
-                        <button class="events-item__btn">More</button>
+                        <div class="events-item__wrapper">
+                            <h3 class="events-item__title">OUR BLOG</h3>
+                            <button class="events-item__btn">More</button>
+                        </div>
+                    </div>
+                    <div class="events-grid">
+                        <div class="events__item">
+                            <div class="events-item__wrapper">
+                                <h3 class="events-item__title">TWO PIZZA FOR 1 PRICE</h3>
+                                <button class="events-item__btn">More</button>
+                            </div>
+                        </div>
+                        <div class="events__item">
+                            <div class="events-item__wrapper">
+                                <h3 class="events-item__title">KITCHEN TOUR</h3>
+                                <button class="events-item__btn">More</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="events__item">
-                        <h3 class="events-item__title">OUR BLOG</h3>
-                        <button class="events-item__btn">More</button>
+                        <div class="events-item__wrapper">
+                            <h3 class="events-item__title">FREE COFFEE FOR 3 PIZZA</h3>
+                            <button class="events-item__btn">More</button>
+                        </div>
                     </div>
                     <div class="events__item">
-                        <h3 class="events-item__title">TWO PIZZA FOR 1 PRICE</h3>
-                        <button class="events-item__btn">More</button>
+                        <div class="events-item__wrapper">
+                            <h3 class="events-item__title">OUR INSTAGRAM</h3>
+                            <button class="events-item__btn">More</button>
+                        </div>
                     </div>
                     <div class="events__item">
-                        <h3 class="events-item__title">KITCHEN TOUR</h3>
-                        <button class="events-item__btn">More</button>
-                    </div>
-                    <div class="events__item">
-                        <h3 class="events-item__title">FREE COFFEE FOR 3 PIZZA</h3>
-                        <button class="events-item__btn">More</button>
-                    </div>
-                    <div class="events__item">
-                        <h3 class="events-item__title">OUR INSTAGRAM</h3>
-                        <button class="events-item__btn">More</button>
-                    </div>
-                    <div class="events__item">
-                        <h3 class="events-item__title">WHERE ARE YOU CHOOSE US?</h3>
-                        <button class="events-item__btn">More</button>
+                        <div class="events-item__wrapper">
+                            <h3 class="events-item__title">WHERE ARE YOU CHOOSE US?</h3>
+                            <button class="events-item__btn">More</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="about" class="about">
             <div class="about__container">
-                <picture>
-                    <source type="image/avif" srcset="./img/about/main-428-1x.avif 1x, ./img/about/main-428-2x.avif 2x"
-                        media="(min-width: 428px) and (max-width: 1511px)">
-                    <source type="image/avif"
-                        srcset="./img/about/main-1512-1x.avif 1x, ./img/about/main-1512-2x.avif 2x"
-                        media="(min-width: 1511px)">
-                    <source type="image/webp" srcset="./img/about/main-428-1x.webp 1x, ./img/about/main-428-2x.webp 2x"
-                        media="(min-width: 428px) and (max-width: 1511px)">
-                    <source type="image/webp"
-                        srcset="./img/about/main-1512-1x.webp 1x, ./img/about/main-1512-2x.webp 2x"
-                        media="(min-width: 1511px)">
-                    <source type="image/jpeg" srcset="./img/about/main-428-1x.jpg 1x, ./img/about/main-428-2x.jpg 2x"
-                        media="(min-width: 428px) and (max-width: 1511px)">
-                    <source type="image/jpeg" srcset="./img/about/main-1512-1x.jpg 1x, ./img/about/main-1512-2x.jpg 2x"
-                        media="(min-width: 1511px)">
-                    <img class="about__img" src="#" alt="pizza">
-                </picture>
+                <div class="decor__wrapper">
+                    <picture>
+                        <source type="image/avif"
+                            srcset="./img/about/main-428-1x.avif 1x, ./img/about/main-428-2x.avif 2x"
+                            media="(min-width: 428px) and (max-width: 1511px)">
+                        <source type="image/avif"
+                            srcset="./img/about/main-1512-1x.avif 1x, ./img/about/main-1512-2x.avif 2x"
+                            media="(min-width: 1511px)">
+                        <source type="image/webp"
+                            srcset="./img/about/main-428-1x.webp 1x, ./img/about/main-428-2x.webp 2x"
+                            media="(min-width: 428px) and (max-width: 1511px)">
+                        <source type="image/webp"
+                            srcset="./img/about/main-1512-1x.webp 1x, ./img/about/main-1512-2x.webp 2x"
+                            media="(min-width: 1511px)">
+                        <source type="image/jpeg"
+                            srcset="./img/about/main-428-1x.jpg 1x, ./img/about/main-428-2x.jpg 2x"
+                            media="(min-width: 428px) and (max-width: 1511px)">
+                        <source type="image/jpeg"
+                            srcset="./img/about/main-1512-1x.jpg 1x, ./img/about/main-1512-2x.jpg 2x"
+                            media="(min-width: 1511px)">
+                        <img class="about__img" src="#" alt="pizza">
+                    </picture>
+                </div>
                 <div class="about__wrapper">
-                    <h2 class="about__title">About us</h2>
+                    <h2 class="about__title section-title">About us</h2>
                     <p class="about__text">In just a couple of years, we have opened 6 outlets in different cities:
                         Kazan,
                         Chelyabinsk, Ufa, Samara, Izhevsk, and in the future we plan to develop the network in other
@@ -445,9 +479,9 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__wrapper">
-                <h3 class="footer__logo">pizzashop</h3>
+                <a href="#hero" class="footer__logo logo">pizzashop</a>
                 <div class="footer__items">
-                    <div class="footer item">
+                    <div class="footer__item">
                         <h3 class="footer__title">Home</h3>
                         <ul class="footer__list">
                             <li class="footer-list__item"><a href="#" class="footer__link">To Order</a></li>
@@ -456,7 +490,7 @@
                             <li class="footer-list__item"><a href="#" class="footer__link">Menu</a></li>
                         </ul>
                     </div>
-                    <div class="footer item">
+                    <div class="footer__item">
                         <h3 class="footer__title">Events</h3>
                         <ul class="footer__list">
                             <li class="footer-list__item"><a href="#" class="footer__link">3 Pizza 1 Free Coffee</a>
@@ -465,7 +499,7 @@
                             <li class="footer-list__item"><a href="#" class="footer__link">Kitchen Tour</a></li>
                         </ul>
                     </div>
-                    <div class="footer item">
+                    <div class="footer__item">
                         <h3 class="footer__title">Menu</h3>
                         <ul class="footer__list">
                             <li class="footer-list__item"><a href="#" class="footer__link">Show All</a></li>
@@ -474,7 +508,7 @@
                             <li class="footer-list__item"><a href="#" class="footer__link">Meat</a></li>
                         </ul>
                     </div>
-                    <div class="footer item">
+                    <div class="footer__item">
                         <h3 class="footer__title">About Us</h3>
                         <ul class="footer__list">
                             <li class="footer-list__item"><a href="#" class="footer__link">Our History</a></li>
@@ -487,17 +521,17 @@
                 <a class="footer-contact__link" href="tel:+7 (937) 333-55-33">+7 (937) 333-55-33</a>
                 <div class="social-media">
                     <a href="https://www.instagram.com/" class="social__item">
-                        <svg class="header__icon instagram">
+                        <svg class="footer__icon instagram">
                             <use xlink:href="./img/symbol-defs.svg#instagram">
                         </svg>
                     </a>
                     <a href="https://x.com/?lang=uk" class="social__item">
-                        <svg class="header__icon twiitter">
+                        <svg class="footer__icon twiitter">
                             <use xlink:href="./img/symbol-defs.svg#twitter">
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/?locale=uk_UA" class="social__item">
-                        <svg class="header__icon facebook">
+                        <svg class="footer__icon facebook">
                             <use xlink:href="./img/symbol-defs.svg#facebook">
                         </svg>
                     </a>
@@ -505,6 +539,7 @@
             </div>
         </div>
     </footer>
+    <script src="./main.js"></script>
 </body>
 
 </html>
